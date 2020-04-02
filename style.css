@@ -6,7 +6,7 @@
 
 body {
     overflow: hidden;
-    background: lightblue;
+    background: none;
 }
 
 .scene, canvas {
