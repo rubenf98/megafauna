@@ -10,10 +10,10 @@ function init() {
     camera.position.set(0, 1.5, 12);
 
 
-    const ambient = new THREE.AmbientLight(0x404040, 1);
+    const ambient = new THREE.AmbientLight(0x404040, 0);
     scene.add(ambient);
 
-    const light = new THREE.DirectionalLight(0xffffff, 3);
+    const light = new THREE.DirectionalLight(0xffffff, 0);
     light.position.set(0, 500, 0);
     scene.add(light);
 
@@ -32,7 +32,6 @@ function init() {
     loader.load("../model/seal.gltf", function (gltf) {
         scene.add(gltf.scene);
         model = gltf.scene.children[0];
-        console.log(gltf.scene.children);
         model.position.set(0, 0, 0); //If we don't distance from center then it gets blocked by background
         renderer.render(scene, camera);
     })

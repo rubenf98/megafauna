@@ -10,10 +10,10 @@ function init() {
     camera.position.set(0, 1, 12);
 
 
-    const ambient = new THREE.AmbientLight(0x404040, 1);
+    const ambient = new THREE.AmbientLight(0x404040, 0);
     scene.add(ambient);
 
-    const light = new THREE.DirectionalLight(0xffffff, 3);
+    const light = new THREE.DirectionalLight(0xffffff, 0);
     light.position.set(0, 500, 0);
     scene.add(light);
 
@@ -60,9 +60,9 @@ function onDocumentMouseMove(event) {
     var mouseY = event.clientY;
     var deltaX = (container.clientWidth / 2 - mouseX);
     var deltaY = (mouseY - container.clientHeight / 2);
-    model.rotation.axis1 += (deltaX - prevDeltaX) * 0.003;
+    model.rotation.z += (deltaX - prevDeltaX) * 0.003;
     if (deltaY > -5) {
-        model.rotation.axis2 += (deltaY - prevDeltaY) * 0.001;
+        model.rotation.x += (deltaY - prevDeltaY) * 0.001;
     }
 
     prevDeltaX = deltaX; prevDeltaY = deltaY;

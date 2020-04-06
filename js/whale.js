@@ -10,10 +10,10 @@ function init() {
     camera.position.set(0, 1, 12);
 
 
-    const ambient = new THREE.AmbientLight(0x404040, 1);
+    const ambient = new THREE.AmbientLight(0x404040, 0);
     scene.add(ambient);
 
-    const light = new THREE.DirectionalLight(0xffffff, 3);
+    const light = new THREE.DirectionalLight(0xffffff, 0);
     light.position.set(0, 500, 0);
     scene.add(light);
 
@@ -42,7 +42,7 @@ function init() {
 function animate() {
     requestAnimationFrame(animate);
     //camera.lookAt(scene.position);
-    console.log(model.rotation);
+    //console.log(model.rotation);
     renderer.render(scene, camera);
 }
 

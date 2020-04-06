@@ -10,10 +10,10 @@ function init() {
     camera.position.set(0, 0.5, 12);
 
 
-    const ambient = new THREE.AmbientLight(0x404040, 1);
+    const ambient = new THREE.AmbientLight(0x404040, 0);
     scene.add(ambient);
 
-    const light = new THREE.DirectionalLight(0xffffff, 3);
+    const light = new THREE.DirectionalLight(0xffffff, 0);
     light.position.set(0, 500, 0);
     scene.add(light);
 
