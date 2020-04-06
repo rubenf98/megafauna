@@ -62,7 +62,7 @@ function onDocumentMouseMove(event) {
     var deltaX = (container.clientWidth / 2 - mouseX);
     var deltaY = (mouseY - container.clientHeight / 2);
 
-    model.rotation.z -= (deltaX - prevDeltaX) * 0.003;
+    model.rotation.z += (deltaX - prevDeltaX) * 0.003;
     if (deltaY > 0) {
         model.rotation.x += (deltaY - prevDeltaY) * 0.001;
     }
